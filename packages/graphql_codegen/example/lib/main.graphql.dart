@@ -3,22 +3,22 @@ import 'fragments.graphql.dart';
 import 'package:flutter/widgets.dart' as widgets;
 import 'package:gql/ast.dart';
 import 'package:graphql/client.dart' as graphql;
-import 'package:graphql_codegen_example/scalars.dart';
+import 'scalars.dart';
 import 'package:graphql_flutter/graphql_flutter.dart' as graphql_flutter;
 
-class Variables$Query$FetchPerson {
-  factory Variables$Query$FetchPerson({required String id}) =>
-      Variables$Query$FetchPerson._({
+class Variables$FetchPerson {
+  factory Variables$FetchPerson({required String id}) =>
+      Variables$FetchPerson._({
         r'id': id,
       });
 
-  Variables$Query$FetchPerson._(this._$data);
+  Variables$FetchPerson._(this._$data);
 
-  factory Variables$Query$FetchPerson.fromJson(Map<String, dynamic> data) {
+  factory Variables$FetchPerson.fromJson(Map<String, dynamic> data) {
     final result$data = <String, dynamic>{};
     final l$id = data['id'];
     result$data['id'] = (l$id as String);
-    return Variables$Query$FetchPerson._(result$data);
+    return Variables$FetchPerson._(result$data);
   }
 
   Map<String, dynamic> _$data;
@@ -31,18 +31,17 @@ class Variables$Query$FetchPerson {
     return result$data;
   }
 
-  CopyWith$Variables$Query$FetchPerson<Variables$Query$FetchPerson>
-      get copyWith => CopyWith$Variables$Query$FetchPerson(
-            this,
-            (i) => i,
-          );
+  CopyWith$Variables$FetchPerson<Variables$FetchPerson> get copyWith =>
+      CopyWith$Variables$FetchPerson(
+        this,
+        (i) => i,
+      );
   @override
   bool operator ==(Object other) {
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Variables$Query$FetchPerson) ||
-        runtimeType != other.runtimeType) {
+    if (!(other is Variables$FetchPerson) || runtimeType != other.runtimeType) {
       return false;
     }
     final l$id = id;
@@ -60,65 +59,65 @@ class Variables$Query$FetchPerson {
   }
 }
 
-abstract class CopyWith$Variables$Query$FetchPerson<TRes> {
-  factory CopyWith$Variables$Query$FetchPerson(
-    Variables$Query$FetchPerson instance,
-    TRes Function(Variables$Query$FetchPerson) then,
-  ) = _CopyWithImpl$Variables$Query$FetchPerson;
+abstract class CopyWith$Variables$FetchPerson<TRes> {
+  factory CopyWith$Variables$FetchPerson(
+    Variables$FetchPerson instance,
+    TRes Function(Variables$FetchPerson) then,
+  ) = _CopyWithImpl$Variables$FetchPerson;
 
-  factory CopyWith$Variables$Query$FetchPerson.stub(TRes res) =
-      _CopyWithStubImpl$Variables$Query$FetchPerson;
+  factory CopyWith$Variables$FetchPerson.stub(TRes res) =
+      _CopyWithStubImpl$Variables$FetchPerson;
 
   TRes call({String? id});
 }
 
-class _CopyWithImpl$Variables$Query$FetchPerson<TRes>
-    implements CopyWith$Variables$Query$FetchPerson<TRes> {
-  _CopyWithImpl$Variables$Query$FetchPerson(
+class _CopyWithImpl$Variables$FetchPerson<TRes>
+    implements CopyWith$Variables$FetchPerson<TRes> {
+  _CopyWithImpl$Variables$FetchPerson(
     this._instance,
     this._then,
   );
 
-  final Variables$Query$FetchPerson _instance;
+  final Variables$FetchPerson _instance;
 
-  final TRes Function(Variables$Query$FetchPerson) _then;
+  final TRes Function(Variables$FetchPerson) _then;
 
   static const _undefined = <dynamic, dynamic>{};
 
-  TRes call({Object? id = _undefined}) => _then(Variables$Query$FetchPerson._({
+  TRes call({Object? id = _undefined}) => _then(Variables$FetchPerson._({
         ..._instance._$data,
         if (id != _undefined && id != null) 'id': (id as String),
       }));
 }
 
-class _CopyWithStubImpl$Variables$Query$FetchPerson<TRes>
-    implements CopyWith$Variables$Query$FetchPerson<TRes> {
-  _CopyWithStubImpl$Variables$Query$FetchPerson(this._res);
+class _CopyWithStubImpl$Variables$FetchPerson<TRes>
+    implements CopyWith$Variables$FetchPerson<TRes> {
+  _CopyWithStubImpl$Variables$FetchPerson(this._res);
 
   TRes _res;
 
   call({String? id}) => _res;
 }
 
-class Query$FetchPerson {
-  Query$FetchPerson({
+class FetchPerson {
+  FetchPerson({
     this.fetchPerson,
     this.$__typename = 'Query',
   });
 
-  factory Query$FetchPerson.fromJson(Map<String, dynamic> json) {
+  factory FetchPerson.fromJson(Map<String, dynamic> json) {
     final l$fetchPerson = json['fetchPerson'];
     final l$$__typename = json['__typename'];
-    return Query$FetchPerson(
+    return FetchPerson(
       fetchPerson: l$fetchPerson == null
           ? null
-          : Query$FetchPerson$fetchPerson.fromJson(
+          : FetchPerson$fetchPerson.fromJson(
               (l$fetchPerson as Map<String, dynamic>)),
       $__typename: (l$$__typename as String),
     );
   }
 
-  final Query$FetchPerson$fetchPerson? fetchPerson;
+  final FetchPerson$fetchPerson? fetchPerson;
 
   final String $__typename;
 
@@ -146,7 +145,7 @@ class Query$FetchPerson {
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Query$FetchPerson) || runtimeType != other.runtimeType) {
+    if (!(other is FetchPerson) || runtimeType != other.runtimeType) {
       return false;
     }
     final l$fetchPerson = fetchPerson;
@@ -163,40 +162,37 @@ class Query$FetchPerson {
   }
 }
 
-extension UtilityExtension$Query$FetchPerson on Query$FetchPerson {
-  CopyWith$Query$FetchPerson<Query$FetchPerson> get copyWith =>
-      CopyWith$Query$FetchPerson(
+extension UtilityExtension$FetchPerson on FetchPerson {
+  CopyWith$FetchPerson<FetchPerson> get copyWith => CopyWith$FetchPerson(
         this,
         (i) => i,
       );
 }
 
-abstract class CopyWith$Query$FetchPerson<TRes> {
-  factory CopyWith$Query$FetchPerson(
-    Query$FetchPerson instance,
-    TRes Function(Query$FetchPerson) then,
-  ) = _CopyWithImpl$Query$FetchPerson;
+abstract class CopyWith$FetchPerson<TRes> {
+  factory CopyWith$FetchPerson(
+    FetchPerson instance,
+    TRes Function(FetchPerson) then,
+  ) = _CopyWithImpl$FetchPerson;
 
-  factory CopyWith$Query$FetchPerson.stub(TRes res) =
-      _CopyWithStubImpl$Query$FetchPerson;
+  factory CopyWith$FetchPerson.stub(TRes res) = _CopyWithStubImpl$FetchPerson;
 
   TRes call({
-    Query$FetchPerson$fetchPerson? fetchPerson,
+    FetchPerson$fetchPerson? fetchPerson,
     String? $__typename,
   });
-  CopyWith$Query$FetchPerson$fetchPerson<TRes> get fetchPerson;
+  CopyWith$FetchPerson$fetchPerson<TRes> get fetchPerson;
 }
 
-class _CopyWithImpl$Query$FetchPerson<TRes>
-    implements CopyWith$Query$FetchPerson<TRes> {
-  _CopyWithImpl$Query$FetchPerson(
+class _CopyWithImpl$FetchPerson<TRes> implements CopyWith$FetchPerson<TRes> {
+  _CopyWithImpl$FetchPerson(
     this._instance,
     this._then,
   );
 
-  final Query$FetchPerson _instance;
+  final FetchPerson _instance;
 
-  final TRes Function(Query$FetchPerson) _then;
+  final TRes Function(FetchPerson) _then;
 
   static const _undefined = <dynamic, dynamic>{};
 
@@ -204,39 +200,39 @@ class _CopyWithImpl$Query$FetchPerson<TRes>
     Object? fetchPerson = _undefined,
     Object? $__typename = _undefined,
   }) =>
-      _then(Query$FetchPerson(
+      _then(FetchPerson(
         fetchPerson: fetchPerson == _undefined
             ? _instance.fetchPerson
-            : (fetchPerson as Query$FetchPerson$fetchPerson?),
+            : (fetchPerson as FetchPerson$fetchPerson?),
         $__typename: $__typename == _undefined || $__typename == null
             ? _instance.$__typename
             : ($__typename as String),
       ));
-  CopyWith$Query$FetchPerson$fetchPerson<TRes> get fetchPerson {
+  CopyWith$FetchPerson$fetchPerson<TRes> get fetchPerson {
     final local$fetchPerson = _instance.fetchPerson;
     return local$fetchPerson == null
-        ? CopyWith$Query$FetchPerson$fetchPerson.stub(_then(_instance))
-        : CopyWith$Query$FetchPerson$fetchPerson(
+        ? CopyWith$FetchPerson$fetchPerson.stub(_then(_instance))
+        : CopyWith$FetchPerson$fetchPerson(
             local$fetchPerson, (e) => call(fetchPerson: e));
   }
 }
 
-class _CopyWithStubImpl$Query$FetchPerson<TRes>
-    implements CopyWith$Query$FetchPerson<TRes> {
-  _CopyWithStubImpl$Query$FetchPerson(this._res);
+class _CopyWithStubImpl$FetchPerson<TRes>
+    implements CopyWith$FetchPerson<TRes> {
+  _CopyWithStubImpl$FetchPerson(this._res);
 
   TRes _res;
 
   call({
-    Query$FetchPerson$fetchPerson? fetchPerson,
+    FetchPerson$fetchPerson? fetchPerson,
     String? $__typename,
   }) =>
       _res;
-  CopyWith$Query$FetchPerson$fetchPerson<TRes> get fetchPerson =>
-      CopyWith$Query$FetchPerson$fetchPerson.stub(_res);
+  CopyWith$FetchPerson$fetchPerson<TRes> get fetchPerson =>
+      CopyWith$FetchPerson$fetchPerson.stub(_res);
 }
 
-const documentNodeQueryFetchPerson = DocumentNode(definitions: [
+const documentNodeFetchPerson = DocumentNode(definitions: [
   OperationDefinitionNode(
     type: OperationType.query,
     name: NameNode(value: 'FetchPerson'),
@@ -324,29 +320,26 @@ const documentNodeQueryFetchPerson = DocumentNode(definitions: [
       ),
     ]),
   ),
-  fragmentDefinitionPersonSummary,
-  fragmentDefinitionPersonParent,
 ]);
-Query$FetchPerson _parserFn$Query$FetchPerson(Map<String, dynamic> data) =>
-    Query$FetchPerson.fromJson(data);
-typedef OnQueryComplete$Query$FetchPerson = FutureOr<void> Function(
+FetchPerson _parserFn$FetchPerson(Map<String, dynamic> data) =>
+    FetchPerson.fromJson(data);
+typedef OnQueryComplete$FetchPerson = FutureOr<void> Function(
   Map<String, dynamic>?,
-  Query$FetchPerson?,
+  FetchPerson?,
 );
 
-class Options$Query$FetchPerson
-    extends graphql.QueryOptions<Query$FetchPerson> {
-  Options$Query$FetchPerson({
+class Options$FetchPerson extends graphql.QueryOptions<FetchPerson> {
+  Options$FetchPerson({
     String? operationName,
-    required Variables$Query$FetchPerson variables,
+    required Variables$FetchPerson variables,
     graphql.FetchPolicy? fetchPolicy,
     graphql.ErrorPolicy? errorPolicy,
     graphql.CacheRereadPolicy? cacheRereadPolicy,
     Object? optimisticResult,
-    Query$FetchPerson? typedOptimisticResult,
+    FetchPerson? typedOptimisticResult,
     Duration? pollInterval,
     graphql.Context? context,
-    OnQueryComplete$Query$FetchPerson? onComplete,
+    OnQueryComplete$FetchPerson? onComplete,
     graphql.OnQueryError? onError,
   })  : onCompleteWithParsed = onComplete,
         super(
@@ -362,14 +355,14 @@ class Options$Query$FetchPerson
               ? null
               : (data) => onComplete(
                     data,
-                    data == null ? null : _parserFn$Query$FetchPerson(data),
+                    data == null ? null : _parserFn$FetchPerson(data),
                   ),
           onError: onError,
-          document: documentNodeQueryFetchPerson,
-          parserFn: _parserFn$Query$FetchPerson,
+          document: documentNodeFetchPerson,
+          parserFn: _parserFn$FetchPerson,
         );
 
-  final OnQueryComplete$Query$FetchPerson? onCompleteWithParsed;
+  final OnQueryComplete$FetchPerson? onCompleteWithParsed;
 
   @override
   List<Object?> get properties => [
@@ -380,16 +373,15 @@ class Options$Query$FetchPerson
       ];
 }
 
-class WatchOptions$Query$FetchPerson
-    extends graphql.WatchQueryOptions<Query$FetchPerson> {
-  WatchOptions$Query$FetchPerson({
+class WatchOptions$FetchPerson extends graphql.WatchQueryOptions<FetchPerson> {
+  WatchOptions$FetchPerson({
     String? operationName,
-    required Variables$Query$FetchPerson variables,
+    required Variables$FetchPerson variables,
     graphql.FetchPolicy? fetchPolicy,
     graphql.ErrorPolicy? errorPolicy,
     graphql.CacheRereadPolicy? cacheRereadPolicy,
     Object? optimisticResult,
-    Query$FetchPerson? typedOptimisticResult,
+    FetchPerson? typedOptimisticResult,
     graphql.Context? context,
     Duration? pollInterval,
     bool? eagerlyFetchResults,
@@ -403,74 +395,73 @@ class WatchOptions$Query$FetchPerson
           cacheRereadPolicy: cacheRereadPolicy,
           optimisticResult: optimisticResult ?? typedOptimisticResult?.toJson(),
           context: context,
-          document: documentNodeQueryFetchPerson,
+          document: documentNodeFetchPerson,
           pollInterval: pollInterval,
           eagerlyFetchResults: eagerlyFetchResults,
           carryForwardDataOnException: carryForwardDataOnException,
           fetchResults: fetchResults,
-          parserFn: _parserFn$Query$FetchPerson,
+          parserFn: _parserFn$FetchPerson,
         );
 }
 
-class FetchMoreOptions$Query$FetchPerson extends graphql.FetchMoreOptions {
-  FetchMoreOptions$Query$FetchPerson({
+class FetchMoreOptions$FetchPerson extends graphql.FetchMoreOptions {
+  FetchMoreOptions$FetchPerson({
     required graphql.UpdateQuery updateQuery,
-    required Variables$Query$FetchPerson variables,
+    required Variables$FetchPerson variables,
   }) : super(
           updateQuery: updateQuery,
           variables: variables.toJson(),
-          document: documentNodeQueryFetchPerson,
+          document: documentNodeFetchPerson,
         );
 }
 
-extension ClientExtension$Query$FetchPerson on graphql.GraphQLClient {
-  Future<graphql.QueryResult<Query$FetchPerson>> query$FetchPerson(
-          Options$Query$FetchPerson options) async =>
+extension ClientExtension$FetchPerson on graphql.GraphQLClient {
+  Future<graphql.QueryResult<FetchPerson>> fetchperson(
+          Options$FetchPerson options) async =>
       await this.query(options);
-  graphql.ObservableQuery<Query$FetchPerson> watchQuery$FetchPerson(
-          WatchOptions$Query$FetchPerson options) =>
+  graphql.ObservableQuery<FetchPerson> watchFetchPerson(
+          WatchOptions$FetchPerson options) =>
       this.watchQuery(options);
-  void writeQuery$FetchPerson({
-    required Query$FetchPerson data,
-    required Variables$Query$FetchPerson variables,
+  void writeFetchPerson({
+    required FetchPerson data,
+    required Variables$FetchPerson variables,
     bool broadcast = true,
   }) =>
       this.writeQuery(
         graphql.Request(
-          operation: graphql.Operation(document: documentNodeQueryFetchPerson),
+          operation: graphql.Operation(document: documentNodeFetchPerson),
           variables: variables.toJson(),
         ),
         data: data.toJson(),
         broadcast: broadcast,
       );
-  Query$FetchPerson? readQuery$FetchPerson({
-    required Variables$Query$FetchPerson variables,
+  FetchPerson? readFetchPerson({
+    required Variables$FetchPerson variables,
     bool optimistic = true,
   }) {
     final result = this.readQuery(
       graphql.Request(
-        operation: graphql.Operation(document: documentNodeQueryFetchPerson),
+        operation: graphql.Operation(document: documentNodeFetchPerson),
         variables: variables.toJson(),
       ),
       optimistic: optimistic,
     );
-    return result == null ? null : Query$FetchPerson.fromJson(result);
+    return result == null ? null : FetchPerson.fromJson(result);
   }
 }
 
-graphql_flutter.QueryHookResult<Query$FetchPerson> useQuery$FetchPerson(
-        Options$Query$FetchPerson options) =>
+graphql_flutter.QueryHookResult<FetchPerson> useFetchPerson(
+        Options$FetchPerson options) =>
     graphql_flutter.useQuery(options);
-graphql.ObservableQuery<Query$FetchPerson> useWatchQuery$FetchPerson(
-        WatchOptions$Query$FetchPerson options) =>
+graphql.ObservableQuery<FetchPerson> useWatchFetchPerson(
+        WatchOptions$FetchPerson options) =>
     graphql_flutter.useWatchQuery(options);
 
-class Query$FetchPerson$Widget
-    extends graphql_flutter.Query<Query$FetchPerson> {
-  Query$FetchPerson$Widget({
+class FetchPerson$Widget extends graphql_flutter.Query<FetchPerson> {
+  FetchPerson$Widget({
     widgets.Key? key,
-    required Options$Query$FetchPerson options,
-    required graphql_flutter.QueryBuilder<Query$FetchPerson> builder,
+    required Options$FetchPerson options,
+    required graphql_flutter.QueryBuilder<FetchPerson> builder,
   }) : super(
           key: key,
           options: options,
@@ -478,8 +469,8 @@ class Query$FetchPerson$Widget
         );
 }
 
-class Query$FetchPerson$fetchPerson implements Fragment$PersonSummary {
-  Query$FetchPerson$fetchPerson({
+class FetchPerson$fetchPerson implements PersonSummary {
+  FetchPerson$fetchPerson({
     this.nickname,
     required this.name,
     this.dob,
@@ -491,7 +482,7 @@ class Query$FetchPerson$fetchPerson implements Fragment$PersonSummary {
     this.children,
   });
 
-  factory Query$FetchPerson$fetchPerson.fromJson(Map<String, dynamic> json) {
+  factory FetchPerson$fetchPerson.fromJson(Map<String, dynamic> json) {
     final l$nickname = json['nickname'];
     final l$name = json['name'];
     final l$dob = json['dob'];
@@ -501,7 +492,7 @@ class Query$FetchPerson$fetchPerson implements Fragment$PersonSummary {
     final l$favParent = json['favParent'];
     final l$$__typename = json['__typename'];
     final l$children = json['children'];
-    return Query$FetchPerson$fetchPerson(
+    return FetchPerson$fetchPerson(
       nickname: (l$nickname as String?),
       name: (l$name as String),
       dob: l$dob == null ? null : dateTimeFromJson(l$dob),
@@ -514,17 +505,15 @@ class Query$FetchPerson$fetchPerson implements Fragment$PersonSummary {
               .toList())
           .toList(),
       parents: (l$parents as List<dynamic>?)
-          ?.map((e) => Query$FetchPerson$fetchPerson$parents.fromJson(
+          ?.map((e) => FetchPerson$fetchPerson$parents.fromJson(
               (e as Map<String, dynamic>)))
           .toList(),
       favParent: l$favParent == null
           ? null
-          : Fragment$PersonParent.fromJson(
-              (l$favParent as Map<String, dynamic>)),
+          : PersonParent.fromJson((l$favParent as Map<String, dynamic>)),
       $__typename: (l$$__typename as String),
       children: (l$children as List<dynamic>?)
-          ?.map((e) =>
-              Fragment$PersonSummary.fromJson((e as Map<String, dynamic>)))
+          ?.map((e) => PersonSummary.fromJson((e as Map<String, dynamic>)))
           .toList(),
     );
   }
@@ -539,13 +528,13 @@ class Query$FetchPerson$fetchPerson implements Fragment$PersonSummary {
 
   final List<List<DateTime?>?>? eventsOfEvents;
 
-  final List<Query$FetchPerson$fetchPerson$parents>? parents;
+  final List<FetchPerson$fetchPerson$parents>? parents;
 
-  final Fragment$PersonParent? favParent;
+  final PersonParent? favParent;
 
   final String $__typename;
 
-  final List<Fragment$PersonSummary>? children;
+  final List<PersonSummary>? children;
 
   Map<String, dynamic> toJson() {
     final _resultData = <String, dynamic>{};
@@ -606,7 +595,7 @@ class Query$FetchPerson$fetchPerson implements Fragment$PersonSummary {
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Query$FetchPerson$fetchPerson) ||
+    if (!(other is FetchPerson$fetchPerson) ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -718,23 +707,22 @@ class Query$FetchPerson$fetchPerson implements Fragment$PersonSummary {
   }
 }
 
-extension UtilityExtension$Query$FetchPerson$fetchPerson
-    on Query$FetchPerson$fetchPerson {
-  CopyWith$Query$FetchPerson$fetchPerson<Query$FetchPerson$fetchPerson>
-      get copyWith => CopyWith$Query$FetchPerson$fetchPerson(
-            this,
-            (i) => i,
-          );
+extension UtilityExtension$FetchPerson$fetchPerson on FetchPerson$fetchPerson {
+  CopyWith$FetchPerson$fetchPerson<FetchPerson$fetchPerson> get copyWith =>
+      CopyWith$FetchPerson$fetchPerson(
+        this,
+        (i) => i,
+      );
 }
 
-abstract class CopyWith$Query$FetchPerson$fetchPerson<TRes> {
-  factory CopyWith$Query$FetchPerson$fetchPerson(
-    Query$FetchPerson$fetchPerson instance,
-    TRes Function(Query$FetchPerson$fetchPerson) then,
-  ) = _CopyWithImpl$Query$FetchPerson$fetchPerson;
+abstract class CopyWith$FetchPerson$fetchPerson<TRes> {
+  factory CopyWith$FetchPerson$fetchPerson(
+    FetchPerson$fetchPerson instance,
+    TRes Function(FetchPerson$fetchPerson) then,
+  ) = _CopyWithImpl$FetchPerson$fetchPerson;
 
-  factory CopyWith$Query$FetchPerson$fetchPerson.stub(TRes res) =
-      _CopyWithStubImpl$Query$FetchPerson$fetchPerson;
+  factory CopyWith$FetchPerson$fetchPerson.stub(TRes res) =
+      _CopyWithStubImpl$FetchPerson$fetchPerson;
 
   TRes call({
     String? nickname,
@@ -742,35 +730,34 @@ abstract class CopyWith$Query$FetchPerson$fetchPerson<TRes> {
     DateTime? dob,
     List<DateTime?>? events,
     List<List<DateTime?>?>? eventsOfEvents,
-    List<Query$FetchPerson$fetchPerson$parents>? parents,
-    Fragment$PersonParent? favParent,
+    List<FetchPerson$fetchPerson$parents>? parents,
+    PersonParent? favParent,
     String? $__typename,
-    List<Fragment$PersonSummary>? children,
+    List<PersonSummary>? children,
   });
   TRes parents(
-      Iterable<Query$FetchPerson$fetchPerson$parents>? Function(
+      Iterable<FetchPerson$fetchPerson$parents>? Function(
               Iterable<
-                  CopyWith$Query$FetchPerson$fetchPerson$parents<
-                      Query$FetchPerson$fetchPerson$parents>>?)
+                  CopyWith$FetchPerson$fetchPerson$parents<
+                      FetchPerson$fetchPerson$parents>>?)
           _fn);
-  CopyWith$Fragment$PersonParent<TRes> get favParent;
+  CopyWith$PersonParent<TRes> get favParent;
   TRes children(
-      Iterable<Fragment$PersonSummary>? Function(
-              Iterable<
-                  CopyWith$Fragment$PersonSummary<Fragment$PersonSummary>>?)
+      Iterable<PersonSummary>? Function(
+              Iterable<CopyWith$PersonSummary<PersonSummary>>?)
           _fn);
 }
 
-class _CopyWithImpl$Query$FetchPerson$fetchPerson<TRes>
-    implements CopyWith$Query$FetchPerson$fetchPerson<TRes> {
-  _CopyWithImpl$Query$FetchPerson$fetchPerson(
+class _CopyWithImpl$FetchPerson$fetchPerson<TRes>
+    implements CopyWith$FetchPerson$fetchPerson<TRes> {
+  _CopyWithImpl$FetchPerson$fetchPerson(
     this._instance,
     this._then,
   );
 
-  final Query$FetchPerson$fetchPerson _instance;
+  final FetchPerson$fetchPerson _instance;
 
-  final TRes Function(Query$FetchPerson$fetchPerson) _then;
+  final TRes Function(FetchPerson$fetchPerson) _then;
 
   static const _undefined = <dynamic, dynamic>{};
 
@@ -785,7 +772,7 @@ class _CopyWithImpl$Query$FetchPerson$fetchPerson<TRes>
     Object? $__typename = _undefined,
     Object? children = _undefined,
   }) =>
-      _then(Query$FetchPerson$fetchPerson(
+      _then(FetchPerson$fetchPerson(
         nickname:
             nickname == _undefined ? _instance.nickname : (nickname as String?),
         name: name == _undefined || name == null
@@ -800,53 +787,50 @@ class _CopyWithImpl$Query$FetchPerson$fetchPerson<TRes>
             : (eventsOfEvents as List<List<DateTime?>?>?),
         parents: parents == _undefined
             ? _instance.parents
-            : (parents as List<Query$FetchPerson$fetchPerson$parents>?),
+            : (parents as List<FetchPerson$fetchPerson$parents>?),
         favParent: favParent == _undefined
             ? _instance.favParent
-            : (favParent as Fragment$PersonParent?),
+            : (favParent as PersonParent?),
         $__typename: $__typename == _undefined || $__typename == null
             ? _instance.$__typename
             : ($__typename as String),
         children: children == _undefined
             ? _instance.children
-            : (children as List<Fragment$PersonSummary>?),
+            : (children as List<PersonSummary>?),
       ));
   TRes parents(
-          Iterable<Query$FetchPerson$fetchPerson$parents>? Function(
+          Iterable<FetchPerson$fetchPerson$parents>? Function(
                   Iterable<
-                      CopyWith$Query$FetchPerson$fetchPerson$parents<
-                          Query$FetchPerson$fetchPerson$parents>>?)
+                      CopyWith$FetchPerson$fetchPerson$parents<
+                          FetchPerson$fetchPerson$parents>>?)
               _fn) =>
       call(
           parents: _fn(_instance.parents
-              ?.map((e) => CopyWith$Query$FetchPerson$fetchPerson$parents(
+              ?.map((e) => CopyWith$FetchPerson$fetchPerson$parents(
                     e,
                     (i) => i,
                   )))?.toList());
-  CopyWith$Fragment$PersonParent<TRes> get favParent {
+  CopyWith$PersonParent<TRes> get favParent {
     final local$favParent = _instance.favParent;
     return local$favParent == null
-        ? CopyWith$Fragment$PersonParent.stub(_then(_instance))
-        : CopyWith$Fragment$PersonParent(
-            local$favParent, (e) => call(favParent: e));
+        ? CopyWith$PersonParent.stub(_then(_instance))
+        : CopyWith$PersonParent(local$favParent, (e) => call(favParent: e));
   }
 
   TRes children(
-          Iterable<Fragment$PersonSummary>? Function(
-                  Iterable<
-                      CopyWith$Fragment$PersonSummary<Fragment$PersonSummary>>?)
+          Iterable<PersonSummary>? Function(
+                  Iterable<CopyWith$PersonSummary<PersonSummary>>?)
               _fn) =>
       call(
-          children: _fn(
-              _instance.children?.map((e) => CopyWith$Fragment$PersonSummary(
-                    e,
-                    (i) => i,
-                  )))?.toList());
+          children: _fn(_instance.children?.map((e) => CopyWith$PersonSummary(
+                e,
+                (i) => i,
+              )))?.toList());
 }
 
-class _CopyWithStubImpl$Query$FetchPerson$fetchPerson<TRes>
-    implements CopyWith$Query$FetchPerson$fetchPerson<TRes> {
-  _CopyWithStubImpl$Query$FetchPerson$fetchPerson(this._res);
+class _CopyWithStubImpl$FetchPerson$fetchPerson<TRes>
+    implements CopyWith$FetchPerson$fetchPerson<TRes> {
+  _CopyWithStubImpl$FetchPerson$fetchPerson(this._res);
 
   TRes _res;
 
@@ -856,21 +840,19 @@ class _CopyWithStubImpl$Query$FetchPerson$fetchPerson<TRes>
     DateTime? dob,
     List<DateTime?>? events,
     List<List<DateTime?>?>? eventsOfEvents,
-    List<Query$FetchPerson$fetchPerson$parents>? parents,
-    Fragment$PersonParent? favParent,
+    List<FetchPerson$fetchPerson$parents>? parents,
+    PersonParent? favParent,
     String? $__typename,
-    List<Fragment$PersonSummary>? children,
+    List<PersonSummary>? children,
   }) =>
       _res;
   parents(_fn) => _res;
-  CopyWith$Fragment$PersonParent<TRes> get favParent =>
-      CopyWith$Fragment$PersonParent.stub(_res);
+  CopyWith$PersonParent<TRes> get favParent => CopyWith$PersonParent.stub(_res);
   children(_fn) => _res;
 }
 
-class Query$FetchPerson$fetchPerson$parents
-    implements Fragment$PersonParent, Fragment$PersonSummary {
-  Query$FetchPerson$fetchPerson$parents({
+class FetchPerson$fetchPerson$parents implements PersonParent, PersonSummary {
+  FetchPerson$fetchPerson$parents({
     required this.name,
     this.$__typename = 'Person',
     this.nickname,
@@ -881,8 +863,7 @@ class Query$FetchPerson$fetchPerson$parents
     this.favParent,
   });
 
-  factory Query$FetchPerson$fetchPerson$parents.fromJson(
-      Map<String, dynamic> json) {
+  factory FetchPerson$fetchPerson$parents.fromJson(Map<String, dynamic> json) {
     final l$name = json['name'];
     final l$$__typename = json['__typename'];
     final l$nickname = json['nickname'];
@@ -891,7 +872,7 @@ class Query$FetchPerson$fetchPerson$parents
     final l$eventsOfEvents = json['eventsOfEvents'];
     final l$parents = json['parents'];
     final l$favParent = json['favParent'];
-    return Query$FetchPerson$fetchPerson$parents(
+    return FetchPerson$fetchPerson$parents(
       name: (l$name as String),
       $__typename: (l$$__typename as String),
       nickname: (l$nickname as String?),
@@ -905,13 +886,11 @@ class Query$FetchPerson$fetchPerson$parents
               .toList())
           .toList(),
       parents: (l$parents as List<dynamic>?)
-          ?.map((e) =>
-              Fragment$PersonParent.fromJson((e as Map<String, dynamic>)))
+          ?.map((e) => PersonParent.fromJson((e as Map<String, dynamic>)))
           .toList(),
       favParent: l$favParent == null
           ? null
-          : Fragment$PersonParent.fromJson(
-              (l$favParent as Map<String, dynamic>)),
+          : PersonParent.fromJson((l$favParent as Map<String, dynamic>)),
     );
   }
 
@@ -927,9 +906,9 @@ class Query$FetchPerson$fetchPerson$parents
 
   final List<List<DateTime?>?>? eventsOfEvents;
 
-  final List<Fragment$PersonParent>? parents;
+  final List<PersonParent>? parents;
 
-  final Fragment$PersonParent? favParent;
+  final PersonParent? favParent;
 
   Map<String, dynamic> toJson() {
     final _resultData = <String, dynamic>{};
@@ -986,7 +965,7 @@ class Query$FetchPerson$fetchPerson$parents
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Query$FetchPerson$fetchPerson$parents) ||
+    if (!(other is FetchPerson$fetchPerson$parents) ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -1082,24 +1061,23 @@ class Query$FetchPerson$fetchPerson$parents
   }
 }
 
-extension UtilityExtension$Query$FetchPerson$fetchPerson$parents
-    on Query$FetchPerson$fetchPerson$parents {
-  CopyWith$Query$FetchPerson$fetchPerson$parents<
-          Query$FetchPerson$fetchPerson$parents>
-      get copyWith => CopyWith$Query$FetchPerson$fetchPerson$parents(
+extension UtilityExtension$FetchPerson$fetchPerson$parents
+    on FetchPerson$fetchPerson$parents {
+  CopyWith$FetchPerson$fetchPerson$parents<FetchPerson$fetchPerson$parents>
+      get copyWith => CopyWith$FetchPerson$fetchPerson$parents(
             this,
             (i) => i,
           );
 }
 
-abstract class CopyWith$Query$FetchPerson$fetchPerson$parents<TRes> {
-  factory CopyWith$Query$FetchPerson$fetchPerson$parents(
-    Query$FetchPerson$fetchPerson$parents instance,
-    TRes Function(Query$FetchPerson$fetchPerson$parents) then,
-  ) = _CopyWithImpl$Query$FetchPerson$fetchPerson$parents;
+abstract class CopyWith$FetchPerson$fetchPerson$parents<TRes> {
+  factory CopyWith$FetchPerson$fetchPerson$parents(
+    FetchPerson$fetchPerson$parents instance,
+    TRes Function(FetchPerson$fetchPerson$parents) then,
+  ) = _CopyWithImpl$FetchPerson$fetchPerson$parents;
 
-  factory CopyWith$Query$FetchPerson$fetchPerson$parents.stub(TRes res) =
-      _CopyWithStubImpl$Query$FetchPerson$fetchPerson$parents;
+  factory CopyWith$FetchPerson$fetchPerson$parents.stub(TRes res) =
+      _CopyWithStubImpl$FetchPerson$fetchPerson$parents;
 
   TRes call({
     String? name,
@@ -1108,26 +1086,26 @@ abstract class CopyWith$Query$FetchPerson$fetchPerson$parents<TRes> {
     DateTime? dob,
     List<DateTime?>? events,
     List<List<DateTime?>?>? eventsOfEvents,
-    List<Fragment$PersonParent>? parents,
-    Fragment$PersonParent? favParent,
+    List<PersonParent>? parents,
+    PersonParent? favParent,
   });
   TRes parents(
-      Iterable<Fragment$PersonParent>? Function(
-              Iterable<CopyWith$Fragment$PersonParent<Fragment$PersonParent>>?)
+      Iterable<PersonParent>? Function(
+              Iterable<CopyWith$PersonParent<PersonParent>>?)
           _fn);
-  CopyWith$Fragment$PersonParent<TRes> get favParent;
+  CopyWith$PersonParent<TRes> get favParent;
 }
 
-class _CopyWithImpl$Query$FetchPerson$fetchPerson$parents<TRes>
-    implements CopyWith$Query$FetchPerson$fetchPerson$parents<TRes> {
-  _CopyWithImpl$Query$FetchPerson$fetchPerson$parents(
+class _CopyWithImpl$FetchPerson$fetchPerson$parents<TRes>
+    implements CopyWith$FetchPerson$fetchPerson$parents<TRes> {
+  _CopyWithImpl$FetchPerson$fetchPerson$parents(
     this._instance,
     this._then,
   );
 
-  final Query$FetchPerson$fetchPerson$parents _instance;
+  final FetchPerson$fetchPerson$parents _instance;
 
-  final TRes Function(Query$FetchPerson$fetchPerson$parents) _then;
+  final TRes Function(FetchPerson$fetchPerson$parents) _then;
 
   static const _undefined = <dynamic, dynamic>{};
 
@@ -1141,7 +1119,7 @@ class _CopyWithImpl$Query$FetchPerson$fetchPerson$parents<TRes>
     Object? parents = _undefined,
     Object? favParent = _undefined,
   }) =>
-      _then(Query$FetchPerson$fetchPerson$parents(
+      _then(FetchPerson$fetchPerson$parents(
         name: name == _undefined || name == null
             ? _instance.name
             : (name as String),
@@ -1159,34 +1137,31 @@ class _CopyWithImpl$Query$FetchPerson$fetchPerson$parents<TRes>
             : (eventsOfEvents as List<List<DateTime?>?>?),
         parents: parents == _undefined
             ? _instance.parents
-            : (parents as List<Fragment$PersonParent>?),
+            : (parents as List<PersonParent>?),
         favParent: favParent == _undefined
             ? _instance.favParent
-            : (favParent as Fragment$PersonParent?),
+            : (favParent as PersonParent?),
       ));
   TRes parents(
-          Iterable<Fragment$PersonParent>? Function(
-                  Iterable<
-                      CopyWith$Fragment$PersonParent<Fragment$PersonParent>>?)
+          Iterable<PersonParent>? Function(
+                  Iterable<CopyWith$PersonParent<PersonParent>>?)
               _fn) =>
       call(
-          parents:
-              _fn(_instance.parents?.map((e) => CopyWith$Fragment$PersonParent(
-                    e,
-                    (i) => i,
-                  )))?.toList());
-  CopyWith$Fragment$PersonParent<TRes> get favParent {
+          parents: _fn(_instance.parents?.map((e) => CopyWith$PersonParent(
+                e,
+                (i) => i,
+              )))?.toList());
+  CopyWith$PersonParent<TRes> get favParent {
     final local$favParent = _instance.favParent;
     return local$favParent == null
-        ? CopyWith$Fragment$PersonParent.stub(_then(_instance))
-        : CopyWith$Fragment$PersonParent(
-            local$favParent, (e) => call(favParent: e));
+        ? CopyWith$PersonParent.stub(_then(_instance))
+        : CopyWith$PersonParent(local$favParent, (e) => call(favParent: e));
   }
 }
 
-class _CopyWithStubImpl$Query$FetchPerson$fetchPerson$parents<TRes>
-    implements CopyWith$Query$FetchPerson$fetchPerson$parents<TRes> {
-  _CopyWithStubImpl$Query$FetchPerson$fetchPerson$parents(this._res);
+class _CopyWithStubImpl$FetchPerson$fetchPerson$parents<TRes>
+    implements CopyWith$FetchPerson$fetchPerson$parents<TRes> {
+  _CopyWithStubImpl$FetchPerson$fetchPerson$parents(this._res);
 
   TRes _res;
 
@@ -1197,28 +1172,27 @@ class _CopyWithStubImpl$Query$FetchPerson$fetchPerson$parents<TRes>
     DateTime? dob,
     List<DateTime?>? events,
     List<List<DateTime?>?>? eventsOfEvents,
-    List<Fragment$PersonParent>? parents,
-    Fragment$PersonParent? favParent,
+    List<PersonParent>? parents,
+    PersonParent? favParent,
   }) =>
       _res;
   parents(_fn) => _res;
-  CopyWith$Fragment$PersonParent<TRes> get favParent =>
-      CopyWith$Fragment$PersonParent.stub(_res);
+  CopyWith$PersonParent<TRes> get favParent => CopyWith$PersonParent.stub(_res);
 }
 
-class Variables$Mutation$UpdatePerson {
-  factory Variables$Mutation$UpdatePerson({required String id}) =>
-      Variables$Mutation$UpdatePerson._({
+class Variables$UpdatePerson {
+  factory Variables$UpdatePerson({required String id}) =>
+      Variables$UpdatePerson._({
         r'id': id,
       });
 
-  Variables$Mutation$UpdatePerson._(this._$data);
+  Variables$UpdatePerson._(this._$data);
 
-  factory Variables$Mutation$UpdatePerson.fromJson(Map<String, dynamic> data) {
+  factory Variables$UpdatePerson.fromJson(Map<String, dynamic> data) {
     final result$data = <String, dynamic>{};
     final l$id = data['id'];
     result$data['id'] = (l$id as String);
-    return Variables$Mutation$UpdatePerson._(result$data);
+    return Variables$UpdatePerson._(result$data);
   }
 
   Map<String, dynamic> _$data;
@@ -1231,17 +1205,17 @@ class Variables$Mutation$UpdatePerson {
     return result$data;
   }
 
-  CopyWith$Variables$Mutation$UpdatePerson<Variables$Mutation$UpdatePerson>
-      get copyWith => CopyWith$Variables$Mutation$UpdatePerson(
-            this,
-            (i) => i,
-          );
+  CopyWith$Variables$UpdatePerson<Variables$UpdatePerson> get copyWith =>
+      CopyWith$Variables$UpdatePerson(
+        this,
+        (i) => i,
+      );
   @override
   bool operator ==(Object other) {
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Variables$Mutation$UpdatePerson) ||
+    if (!(other is Variables$UpdatePerson) ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -1260,66 +1234,65 @@ class Variables$Mutation$UpdatePerson {
   }
 }
 
-abstract class CopyWith$Variables$Mutation$UpdatePerson<TRes> {
-  factory CopyWith$Variables$Mutation$UpdatePerson(
-    Variables$Mutation$UpdatePerson instance,
-    TRes Function(Variables$Mutation$UpdatePerson) then,
-  ) = _CopyWithImpl$Variables$Mutation$UpdatePerson;
+abstract class CopyWith$Variables$UpdatePerson<TRes> {
+  factory CopyWith$Variables$UpdatePerson(
+    Variables$UpdatePerson instance,
+    TRes Function(Variables$UpdatePerson) then,
+  ) = _CopyWithImpl$Variables$UpdatePerson;
 
-  factory CopyWith$Variables$Mutation$UpdatePerson.stub(TRes res) =
-      _CopyWithStubImpl$Variables$Mutation$UpdatePerson;
+  factory CopyWith$Variables$UpdatePerson.stub(TRes res) =
+      _CopyWithStubImpl$Variables$UpdatePerson;
 
   TRes call({String? id});
 }
 
-class _CopyWithImpl$Variables$Mutation$UpdatePerson<TRes>
-    implements CopyWith$Variables$Mutation$UpdatePerson<TRes> {
-  _CopyWithImpl$Variables$Mutation$UpdatePerson(
+class _CopyWithImpl$Variables$UpdatePerson<TRes>
+    implements CopyWith$Variables$UpdatePerson<TRes> {
+  _CopyWithImpl$Variables$UpdatePerson(
     this._instance,
     this._then,
   );
 
-  final Variables$Mutation$UpdatePerson _instance;
+  final Variables$UpdatePerson _instance;
 
-  final TRes Function(Variables$Mutation$UpdatePerson) _then;
+  final TRes Function(Variables$UpdatePerson) _then;
 
   static const _undefined = <dynamic, dynamic>{};
 
-  TRes call({Object? id = _undefined}) =>
-      _then(Variables$Mutation$UpdatePerson._({
+  TRes call({Object? id = _undefined}) => _then(Variables$UpdatePerson._({
         ..._instance._$data,
         if (id != _undefined && id != null) 'id': (id as String),
       }));
 }
 
-class _CopyWithStubImpl$Variables$Mutation$UpdatePerson<TRes>
-    implements CopyWith$Variables$Mutation$UpdatePerson<TRes> {
-  _CopyWithStubImpl$Variables$Mutation$UpdatePerson(this._res);
+class _CopyWithStubImpl$Variables$UpdatePerson<TRes>
+    implements CopyWith$Variables$UpdatePerson<TRes> {
+  _CopyWithStubImpl$Variables$UpdatePerson(this._res);
 
   TRes _res;
 
   call({String? id}) => _res;
 }
 
-class Mutation$UpdatePerson {
-  Mutation$UpdatePerson({
+class UpdatePerson {
+  UpdatePerson({
     this.updatePerson,
     this.$__typename = 'Mutation',
   });
 
-  factory Mutation$UpdatePerson.fromJson(Map<String, dynamic> json) {
+  factory UpdatePerson.fromJson(Map<String, dynamic> json) {
     final l$updatePerson = json['updatePerson'];
     final l$$__typename = json['__typename'];
-    return Mutation$UpdatePerson(
+    return UpdatePerson(
       updatePerson: l$updatePerson == null
           ? null
-          : Mutation$UpdatePerson$updatePerson.fromJson(
+          : UpdatePerson$updatePerson.fromJson(
               (l$updatePerson as Map<String, dynamic>)),
       $__typename: (l$$__typename as String),
     );
   }
 
-  final Mutation$UpdatePerson$updatePerson? updatePerson;
+  final UpdatePerson$updatePerson? updatePerson;
 
   final String $__typename;
 
@@ -1347,7 +1320,7 @@ class Mutation$UpdatePerson {
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Mutation$UpdatePerson) || runtimeType != other.runtimeType) {
+    if (!(other is UpdatePerson) || runtimeType != other.runtimeType) {
       return false;
     }
     final l$updatePerson = updatePerson;
@@ -1364,40 +1337,37 @@ class Mutation$UpdatePerson {
   }
 }
 
-extension UtilityExtension$Mutation$UpdatePerson on Mutation$UpdatePerson {
-  CopyWith$Mutation$UpdatePerson<Mutation$UpdatePerson> get copyWith =>
-      CopyWith$Mutation$UpdatePerson(
+extension UtilityExtension$UpdatePerson on UpdatePerson {
+  CopyWith$UpdatePerson<UpdatePerson> get copyWith => CopyWith$UpdatePerson(
         this,
         (i) => i,
       );
 }
 
-abstract class CopyWith$Mutation$UpdatePerson<TRes> {
-  factory CopyWith$Mutation$UpdatePerson(
-    Mutation$UpdatePerson instance,
-    TRes Function(Mutation$UpdatePerson) then,
-  ) = _CopyWithImpl$Mutation$UpdatePerson;
+abstract class CopyWith$UpdatePerson<TRes> {
+  factory CopyWith$UpdatePerson(
+    UpdatePerson instance,
+    TRes Function(UpdatePerson) then,
+  ) = _CopyWithImpl$UpdatePerson;
 
-  factory CopyWith$Mutation$UpdatePerson.stub(TRes res) =
-      _CopyWithStubImpl$Mutation$UpdatePerson;
+  factory CopyWith$UpdatePerson.stub(TRes res) = _CopyWithStubImpl$UpdatePerson;
 
   TRes call({
-    Mutation$UpdatePerson$updatePerson? updatePerson,
+    UpdatePerson$updatePerson? updatePerson,
     String? $__typename,
   });
-  CopyWith$Mutation$UpdatePerson$updatePerson<TRes> get updatePerson;
+  CopyWith$UpdatePerson$updatePerson<TRes> get updatePerson;
 }
 
-class _CopyWithImpl$Mutation$UpdatePerson<TRes>
-    implements CopyWith$Mutation$UpdatePerson<TRes> {
-  _CopyWithImpl$Mutation$UpdatePerson(
+class _CopyWithImpl$UpdatePerson<TRes> implements CopyWith$UpdatePerson<TRes> {
+  _CopyWithImpl$UpdatePerson(
     this._instance,
     this._then,
   );
 
-  final Mutation$UpdatePerson _instance;
+  final UpdatePerson _instance;
 
-  final TRes Function(Mutation$UpdatePerson) _then;
+  final TRes Function(UpdatePerson) _then;
 
   static const _undefined = <dynamic, dynamic>{};
 
@@ -1405,39 +1375,39 @@ class _CopyWithImpl$Mutation$UpdatePerson<TRes>
     Object? updatePerson = _undefined,
     Object? $__typename = _undefined,
   }) =>
-      _then(Mutation$UpdatePerson(
+      _then(UpdatePerson(
         updatePerson: updatePerson == _undefined
             ? _instance.updatePerson
-            : (updatePerson as Mutation$UpdatePerson$updatePerson?),
+            : (updatePerson as UpdatePerson$updatePerson?),
         $__typename: $__typename == _undefined || $__typename == null
             ? _instance.$__typename
             : ($__typename as String),
       ));
-  CopyWith$Mutation$UpdatePerson$updatePerson<TRes> get updatePerson {
+  CopyWith$UpdatePerson$updatePerson<TRes> get updatePerson {
     final local$updatePerson = _instance.updatePerson;
     return local$updatePerson == null
-        ? CopyWith$Mutation$UpdatePerson$updatePerson.stub(_then(_instance))
-        : CopyWith$Mutation$UpdatePerson$updatePerson(
+        ? CopyWith$UpdatePerson$updatePerson.stub(_then(_instance))
+        : CopyWith$UpdatePerson$updatePerson(
             local$updatePerson, (e) => call(updatePerson: e));
   }
 }
 
-class _CopyWithStubImpl$Mutation$UpdatePerson<TRes>
-    implements CopyWith$Mutation$UpdatePerson<TRes> {
-  _CopyWithStubImpl$Mutation$UpdatePerson(this._res);
+class _CopyWithStubImpl$UpdatePerson<TRes>
+    implements CopyWith$UpdatePerson<TRes> {
+  _CopyWithStubImpl$UpdatePerson(this._res);
 
   TRes _res;
 
   call({
-    Mutation$UpdatePerson$updatePerson? updatePerson,
+    UpdatePerson$updatePerson? updatePerson,
     String? $__typename,
   }) =>
       _res;
-  CopyWith$Mutation$UpdatePerson$updatePerson<TRes> get updatePerson =>
-      CopyWith$Mutation$UpdatePerson$updatePerson.stub(_res);
+  CopyWith$UpdatePerson$updatePerson<TRes> get updatePerson =>
+      CopyWith$UpdatePerson$updatePerson.stub(_res);
 }
 
-const documentNodeMutationUpdatePerson = DocumentNode(definitions: [
+const documentNodeUpdatePerson = DocumentNode(definitions: [
   OperationDefinitionNode(
     type: OperationType.mutation,
     name: NameNode(value: 'UpdatePerson'),
@@ -1491,27 +1461,25 @@ const documentNodeMutationUpdatePerson = DocumentNode(definitions: [
     ]),
   ),
 ]);
-Mutation$UpdatePerson _parserFn$Mutation$UpdatePerson(
-        Map<String, dynamic> data) =>
-    Mutation$UpdatePerson.fromJson(data);
-typedef OnMutationCompleted$Mutation$UpdatePerson = FutureOr<void> Function(
+UpdatePerson _parserFn$UpdatePerson(Map<String, dynamic> data) =>
+    UpdatePerson.fromJson(data);
+typedef OnMutationCompleted$UpdatePerson = FutureOr<void> Function(
   Map<String, dynamic>?,
-  Mutation$UpdatePerson?,
+  UpdatePerson?,
 );
 
-class Options$Mutation$UpdatePerson
-    extends graphql.MutationOptions<Mutation$UpdatePerson> {
-  Options$Mutation$UpdatePerson({
+class Options$UpdatePerson extends graphql.MutationOptions<UpdatePerson> {
+  Options$UpdatePerson({
     String? operationName,
-    required Variables$Mutation$UpdatePerson variables,
+    required Variables$UpdatePerson variables,
     graphql.FetchPolicy? fetchPolicy,
     graphql.ErrorPolicy? errorPolicy,
     graphql.CacheRereadPolicy? cacheRereadPolicy,
     Object? optimisticResult,
-    Mutation$UpdatePerson? typedOptimisticResult,
+    UpdatePerson? typedOptimisticResult,
     graphql.Context? context,
-    OnMutationCompleted$Mutation$UpdatePerson? onCompleted,
-    graphql.OnMutationUpdate<Mutation$UpdatePerson>? update,
+    OnMutationCompleted$UpdatePerson? onCompleted,
+    graphql.OnMutationUpdate<UpdatePerson>? update,
     graphql.OnError? onError,
   })  : onCompletedWithParsed = onCompleted,
         super(
@@ -1526,15 +1494,15 @@ class Options$Mutation$UpdatePerson
               ? null
               : (data) => onCompleted(
                     data,
-                    data == null ? null : _parserFn$Mutation$UpdatePerson(data),
+                    data == null ? null : _parserFn$UpdatePerson(data),
                   ),
           update: update,
           onError: onError,
-          document: documentNodeMutationUpdatePerson,
-          parserFn: _parserFn$Mutation$UpdatePerson,
+          document: documentNodeUpdatePerson,
+          parserFn: _parserFn$UpdatePerson,
         );
 
-  final OnMutationCompleted$Mutation$UpdatePerson? onCompletedWithParsed;
+  final OnMutationCompleted$UpdatePerson? onCompletedWithParsed;
 
   @override
   List<Object?> get properties => [
@@ -1545,16 +1513,16 @@ class Options$Mutation$UpdatePerson
       ];
 }
 
-class WatchOptions$Mutation$UpdatePerson
-    extends graphql.WatchQueryOptions<Mutation$UpdatePerson> {
-  WatchOptions$Mutation$UpdatePerson({
+class WatchOptions$UpdatePerson
+    extends graphql.WatchQueryOptions<UpdatePerson> {
+  WatchOptions$UpdatePerson({
     String? operationName,
-    required Variables$Mutation$UpdatePerson variables,
+    required Variables$UpdatePerson variables,
     graphql.FetchPolicy? fetchPolicy,
     graphql.ErrorPolicy? errorPolicy,
     graphql.CacheRereadPolicy? cacheRereadPolicy,
     Object? optimisticResult,
-    Mutation$UpdatePerson? typedOptimisticResult,
+    UpdatePerson? typedOptimisticResult,
     graphql.Context? context,
     Duration? pollInterval,
     bool? eagerlyFetchResults,
@@ -1568,40 +1536,39 @@ class WatchOptions$Mutation$UpdatePerson
           cacheRereadPolicy: cacheRereadPolicy,
           optimisticResult: optimisticResult ?? typedOptimisticResult?.toJson(),
           context: context,
-          document: documentNodeMutationUpdatePerson,
+          document: documentNodeUpdatePerson,
           pollInterval: pollInterval,
           eagerlyFetchResults: eagerlyFetchResults,
           carryForwardDataOnException: carryForwardDataOnException,
           fetchResults: fetchResults,
-          parserFn: _parserFn$Mutation$UpdatePerson,
+          parserFn: _parserFn$UpdatePerson,
         );
 }
 
-extension ClientExtension$Mutation$UpdatePerson on graphql.GraphQLClient {
-  Future<graphql.QueryResult<Mutation$UpdatePerson>> mutate$UpdatePerson(
-          Options$Mutation$UpdatePerson options) async =>
+extension ClientExtension$UpdatePerson on graphql.GraphQLClient {
+  Future<graphql.QueryResult<UpdatePerson>> updateperson(
+          Options$UpdatePerson options) async =>
       await this.mutate(options);
-  graphql.ObservableQuery<Mutation$UpdatePerson> watchMutation$UpdatePerson(
-          WatchOptions$Mutation$UpdatePerson options) =>
+  graphql.ObservableQuery<UpdatePerson> watchUpdatePerson(
+          WatchOptions$UpdatePerson options) =>
       this.watchMutation(options);
 }
 
-class Mutation$UpdatePerson$HookResult {
-  Mutation$UpdatePerson$HookResult(
+class UpdatePerson$HookResult {
+  UpdatePerson$HookResult(
     this.runMutation,
     this.result,
   );
 
-  final RunMutation$Mutation$UpdatePerson runMutation;
+  final RunMutation$UpdatePerson runMutation;
 
-  final graphql.QueryResult<Mutation$UpdatePerson> result;
+  final graphql.QueryResult<UpdatePerson> result;
 }
 
-Mutation$UpdatePerson$HookResult useMutation$UpdatePerson(
-    [WidgetOptions$Mutation$UpdatePerson? options]) {
-  final result = graphql_flutter
-      .useMutation(options ?? WidgetOptions$Mutation$UpdatePerson());
-  return Mutation$UpdatePerson$HookResult(
+UpdatePerson$HookResult useUpdatePerson([WidgetOptions$UpdatePerson? options]) {
+  final result =
+      graphql_flutter.useMutation(options ?? WidgetOptions$UpdatePerson());
+  return UpdatePerson$HookResult(
     (variables, {optimisticResult, typedOptimisticResult}) =>
         result.runMutation(
       variables.toJson(),
@@ -1611,22 +1578,21 @@ Mutation$UpdatePerson$HookResult useMutation$UpdatePerson(
   );
 }
 
-graphql.ObservableQuery<Mutation$UpdatePerson> useWatchMutation$UpdatePerson(
-        WatchOptions$Mutation$UpdatePerson options) =>
+graphql.ObservableQuery<UpdatePerson> useWatchUpdatePerson(
+        WatchOptions$UpdatePerson options) =>
     graphql_flutter.useWatchMutation(options);
 
-class WidgetOptions$Mutation$UpdatePerson
-    extends graphql.MutationOptions<Mutation$UpdatePerson> {
-  WidgetOptions$Mutation$UpdatePerson({
+class WidgetOptions$UpdatePerson extends graphql.MutationOptions<UpdatePerson> {
+  WidgetOptions$UpdatePerson({
     String? operationName,
     graphql.FetchPolicy? fetchPolicy,
     graphql.ErrorPolicy? errorPolicy,
     graphql.CacheRereadPolicy? cacheRereadPolicy,
     Object? optimisticResult,
-    Mutation$UpdatePerson? typedOptimisticResult,
+    UpdatePerson? typedOptimisticResult,
     graphql.Context? context,
-    OnMutationCompleted$Mutation$UpdatePerson? onCompleted,
-    graphql.OnMutationUpdate<Mutation$UpdatePerson>? update,
+    OnMutationCompleted$UpdatePerson? onCompleted,
+    graphql.OnMutationUpdate<UpdatePerson>? update,
     graphql.OnError? onError,
   })  : onCompletedWithParsed = onCompleted,
         super(
@@ -1640,15 +1606,15 @@ class WidgetOptions$Mutation$UpdatePerson
               ? null
               : (data) => onCompleted(
                     data,
-                    data == null ? null : _parserFn$Mutation$UpdatePerson(data),
+                    data == null ? null : _parserFn$UpdatePerson(data),
                   ),
           update: update,
           onError: onError,
-          document: documentNodeMutationUpdatePerson,
-          parserFn: _parserFn$Mutation$UpdatePerson,
+          document: documentNodeUpdatePerson,
+          parserFn: _parserFn$UpdatePerson,
         );
 
-  final OnMutationCompleted$Mutation$UpdatePerson? onCompletedWithParsed;
+  final OnMutationCompleted$UpdatePerson? onCompletedWithParsed;
 
   @override
   List<Object?> get properties => [
@@ -1659,26 +1625,25 @@ class WidgetOptions$Mutation$UpdatePerson
       ];
 }
 
-typedef RunMutation$Mutation$UpdatePerson
-    = graphql.MultiSourceResult<Mutation$UpdatePerson> Function(
-  Variables$Mutation$UpdatePerson, {
+typedef RunMutation$UpdatePerson = graphql.MultiSourceResult<UpdatePerson>
+    Function(
+  Variables$UpdatePerson, {
   Object? optimisticResult,
-  Mutation$UpdatePerson? typedOptimisticResult,
+  UpdatePerson? typedOptimisticResult,
 });
-typedef Builder$Mutation$UpdatePerson = widgets.Widget Function(
-  RunMutation$Mutation$UpdatePerson,
-  graphql.QueryResult<Mutation$UpdatePerson>?,
+typedef Builder$UpdatePerson = widgets.Widget Function(
+  RunMutation$UpdatePerson,
+  graphql.QueryResult<UpdatePerson>?,
 );
 
-class Mutation$UpdatePerson$Widget
-    extends graphql_flutter.Mutation<Mutation$UpdatePerson> {
-  Mutation$UpdatePerson$Widget({
+class UpdatePerson$Widget extends graphql_flutter.Mutation<UpdatePerson> {
+  UpdatePerson$Widget({
     widgets.Key? key,
-    WidgetOptions$Mutation$UpdatePerson? options,
-    required Builder$Mutation$UpdatePerson builder,
+    WidgetOptions$UpdatePerson? options,
+    required Builder$UpdatePerson builder,
   }) : super(
           key: key,
-          options: options ?? WidgetOptions$Mutation$UpdatePerson(),
+          options: options ?? WidgetOptions$UpdatePerson(),
           builder: (
             run,
             result,
@@ -1699,17 +1664,16 @@ class Mutation$UpdatePerson$Widget
         );
 }
 
-class Mutation$UpdatePerson$updatePerson {
-  Mutation$UpdatePerson$updatePerson({
+class UpdatePerson$updatePerson {
+  UpdatePerson$updatePerson({
     required this.full_name,
     this.$__typename = 'Person',
   });
 
-  factory Mutation$UpdatePerson$updatePerson.fromJson(
-      Map<String, dynamic> json) {
+  factory UpdatePerson$updatePerson.fromJson(Map<String, dynamic> json) {
     final l$full_name = json['full_name'];
     final l$$__typename = json['__typename'];
-    return Mutation$UpdatePerson$updatePerson(
+    return UpdatePerson$updatePerson(
       full_name: (l$full_name as String),
       $__typename: (l$$__typename as String),
     );
@@ -1743,7 +1707,7 @@ class Mutation$UpdatePerson$updatePerson {
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Mutation$UpdatePerson$updatePerson) ||
+    if (!(other is UpdatePerson$updatePerson) ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -1761,24 +1725,23 @@ class Mutation$UpdatePerson$updatePerson {
   }
 }
 
-extension UtilityExtension$Mutation$UpdatePerson$updatePerson
-    on Mutation$UpdatePerson$updatePerson {
-  CopyWith$Mutation$UpdatePerson$updatePerson<
-          Mutation$UpdatePerson$updatePerson>
-      get copyWith => CopyWith$Mutation$UpdatePerson$updatePerson(
-            this,
-            (i) => i,
-          );
+extension UtilityExtension$UpdatePerson$updatePerson
+    on UpdatePerson$updatePerson {
+  CopyWith$UpdatePerson$updatePerson<UpdatePerson$updatePerson> get copyWith =>
+      CopyWith$UpdatePerson$updatePerson(
+        this,
+        (i) => i,
+      );
 }
 
-abstract class CopyWith$Mutation$UpdatePerson$updatePerson<TRes> {
-  factory CopyWith$Mutation$UpdatePerson$updatePerson(
-    Mutation$UpdatePerson$updatePerson instance,
-    TRes Function(Mutation$UpdatePerson$updatePerson) then,
-  ) = _CopyWithImpl$Mutation$UpdatePerson$updatePerson;
+abstract class CopyWith$UpdatePerson$updatePerson<TRes> {
+  factory CopyWith$UpdatePerson$updatePerson(
+    UpdatePerson$updatePerson instance,
+    TRes Function(UpdatePerson$updatePerson) then,
+  ) = _CopyWithImpl$UpdatePerson$updatePerson;
 
-  factory CopyWith$Mutation$UpdatePerson$updatePerson.stub(TRes res) =
-      _CopyWithStubImpl$Mutation$UpdatePerson$updatePerson;
+  factory CopyWith$UpdatePerson$updatePerson.stub(TRes res) =
+      _CopyWithStubImpl$UpdatePerson$updatePerson;
 
   TRes call({
     String? full_name,
@@ -1786,16 +1749,16 @@ abstract class CopyWith$Mutation$UpdatePerson$updatePerson<TRes> {
   });
 }
 
-class _CopyWithImpl$Mutation$UpdatePerson$updatePerson<TRes>
-    implements CopyWith$Mutation$UpdatePerson$updatePerson<TRes> {
-  _CopyWithImpl$Mutation$UpdatePerson$updatePerson(
+class _CopyWithImpl$UpdatePerson$updatePerson<TRes>
+    implements CopyWith$UpdatePerson$updatePerson<TRes> {
+  _CopyWithImpl$UpdatePerson$updatePerson(
     this._instance,
     this._then,
   );
 
-  final Mutation$UpdatePerson$updatePerson _instance;
+  final UpdatePerson$updatePerson _instance;
 
-  final TRes Function(Mutation$UpdatePerson$updatePerson) _then;
+  final TRes Function(UpdatePerson$updatePerson) _then;
 
   static const _undefined = <dynamic, dynamic>{};
 
@@ -1803,7 +1766,7 @@ class _CopyWithImpl$Mutation$UpdatePerson$updatePerson<TRes>
     Object? full_name = _undefined,
     Object? $__typename = _undefined,
   }) =>
-      _then(Mutation$UpdatePerson$updatePerson(
+      _then(UpdatePerson$updatePerson(
         full_name: full_name == _undefined || full_name == null
             ? _instance.full_name
             : (full_name as String),
@@ -1813,9 +1776,9 @@ class _CopyWithImpl$Mutation$UpdatePerson$updatePerson<TRes>
       ));
 }
 
-class _CopyWithStubImpl$Mutation$UpdatePerson$updatePerson<TRes>
-    implements CopyWith$Mutation$UpdatePerson$updatePerson<TRes> {
-  _CopyWithStubImpl$Mutation$UpdatePerson$updatePerson(this._res);
+class _CopyWithStubImpl$UpdatePerson$updatePerson<TRes>
+    implements CopyWith$UpdatePerson$updatePerson<TRes> {
+  _CopyWithStubImpl$UpdatePerson$updatePerson(this._res);
 
   TRes _res;
 
@@ -1826,22 +1789,20 @@ class _CopyWithStubImpl$Mutation$UpdatePerson$updatePerson<TRes>
       _res;
 }
 
-class Variables$Subscription$WatchPerson {
-  factory Variables$Subscription$WatchPerson({String? id}) =>
-      Variables$Subscription$WatchPerson._({
+class Variables$WatchPerson {
+  factory Variables$WatchPerson({String? id}) => Variables$WatchPerson._({
         if (id != null) r'id': id,
       });
 
-  Variables$Subscription$WatchPerson._(this._$data);
+  Variables$WatchPerson._(this._$data);
 
-  factory Variables$Subscription$WatchPerson.fromJson(
-      Map<String, dynamic> data) {
+  factory Variables$WatchPerson.fromJson(Map<String, dynamic> data) {
     final result$data = <String, dynamic>{};
     if (data.containsKey('id')) {
       final l$id = data['id'];
       result$data['id'] = (l$id as String?);
     }
-    return Variables$Subscription$WatchPerson._(result$data);
+    return Variables$WatchPerson._(result$data);
   }
 
   Map<String, dynamic> _$data;
@@ -1856,19 +1817,17 @@ class Variables$Subscription$WatchPerson {
     return result$data;
   }
 
-  CopyWith$Variables$Subscription$WatchPerson<
-          Variables$Subscription$WatchPerson>
-      get copyWith => CopyWith$Variables$Subscription$WatchPerson(
-            this,
-            (i) => i,
-          );
+  CopyWith$Variables$WatchPerson<Variables$WatchPerson> get copyWith =>
+      CopyWith$Variables$WatchPerson(
+        this,
+        (i) => i,
+      );
   @override
   bool operator ==(Object other) {
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Variables$Subscription$WatchPerson) ||
-        runtimeType != other.runtimeType) {
+    if (!(other is Variables$WatchPerson) || runtimeType != other.runtimeType) {
       return false;
     }
     final l$id = id;
@@ -1889,66 +1848,65 @@ class Variables$Subscription$WatchPerson {
   }
 }
 
-abstract class CopyWith$Variables$Subscription$WatchPerson<TRes> {
-  factory CopyWith$Variables$Subscription$WatchPerson(
-    Variables$Subscription$WatchPerson instance,
-    TRes Function(Variables$Subscription$WatchPerson) then,
-  ) = _CopyWithImpl$Variables$Subscription$WatchPerson;
+abstract class CopyWith$Variables$WatchPerson<TRes> {
+  factory CopyWith$Variables$WatchPerson(
+    Variables$WatchPerson instance,
+    TRes Function(Variables$WatchPerson) then,
+  ) = _CopyWithImpl$Variables$WatchPerson;
 
-  factory CopyWith$Variables$Subscription$WatchPerson.stub(TRes res) =
-      _CopyWithStubImpl$Variables$Subscription$WatchPerson;
+  factory CopyWith$Variables$WatchPerson.stub(TRes res) =
+      _CopyWithStubImpl$Variables$WatchPerson;
 
   TRes call({String? id});
 }
 
-class _CopyWithImpl$Variables$Subscription$WatchPerson<TRes>
-    implements CopyWith$Variables$Subscription$WatchPerson<TRes> {
-  _CopyWithImpl$Variables$Subscription$WatchPerson(
+class _CopyWithImpl$Variables$WatchPerson<TRes>
+    implements CopyWith$Variables$WatchPerson<TRes> {
+  _CopyWithImpl$Variables$WatchPerson(
     this._instance,
     this._then,
   );
 
-  final Variables$Subscription$WatchPerson _instance;
+  final Variables$WatchPerson _instance;
 
-  final TRes Function(Variables$Subscription$WatchPerson) _then;
+  final TRes Function(Variables$WatchPerson) _then;
 
   static const _undefined = <dynamic, dynamic>{};
 
-  TRes call({Object? id = _undefined}) =>
-      _then(Variables$Subscription$WatchPerson._({
+  TRes call({Object? id = _undefined}) => _then(Variables$WatchPerson._({
         ..._instance._$data,
         if (id != _undefined) 'id': (id as String?),
       }));
 }
 
-class _CopyWithStubImpl$Variables$Subscription$WatchPerson<TRes>
-    implements CopyWith$Variables$Subscription$WatchPerson<TRes> {
-  _CopyWithStubImpl$Variables$Subscription$WatchPerson(this._res);
+class _CopyWithStubImpl$Variables$WatchPerson<TRes>
+    implements CopyWith$Variables$WatchPerson<TRes> {
+  _CopyWithStubImpl$Variables$WatchPerson(this._res);
 
   TRes _res;
 
   call({String? id}) => _res;
 }
 
-class Subscription$WatchPerson {
-  Subscription$WatchPerson({
+class WatchPerson {
+  WatchPerson({
     this.watchPerson,
     this.$__typename = 'Subscription',
   });
 
-  factory Subscription$WatchPerson.fromJson(Map<String, dynamic> json) {
+  factory WatchPerson.fromJson(Map<String, dynamic> json) {
     final l$watchPerson = json['watchPerson'];
     final l$$__typename = json['__typename'];
-    return Subscription$WatchPerson(
+    return WatchPerson(
       watchPerson: l$watchPerson == null
           ? null
-          : Subscription$WatchPerson$watchPerson.fromJson(
+          : WatchPerson$watchPerson.fromJson(
               (l$watchPerson as Map<String, dynamic>)),
       $__typename: (l$$__typename as String),
     );
   }
 
-  final Subscription$WatchPerson$watchPerson? watchPerson;
+  final WatchPerson$watchPerson? watchPerson;
 
   final String $__typename;
 
@@ -1976,8 +1934,7 @@ class Subscription$WatchPerson {
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Subscription$WatchPerson) ||
-        runtimeType != other.runtimeType) {
+    if (!(other is WatchPerson) || runtimeType != other.runtimeType) {
       return false;
     }
     final l$watchPerson = watchPerson;
@@ -1994,41 +1951,37 @@ class Subscription$WatchPerson {
   }
 }
 
-extension UtilityExtension$Subscription$WatchPerson
-    on Subscription$WatchPerson {
-  CopyWith$Subscription$WatchPerson<Subscription$WatchPerson> get copyWith =>
-      CopyWith$Subscription$WatchPerson(
+extension UtilityExtension$WatchPerson on WatchPerson {
+  CopyWith$WatchPerson<WatchPerson> get copyWith => CopyWith$WatchPerson(
         this,
         (i) => i,
       );
 }
 
-abstract class CopyWith$Subscription$WatchPerson<TRes> {
-  factory CopyWith$Subscription$WatchPerson(
-    Subscription$WatchPerson instance,
-    TRes Function(Subscription$WatchPerson) then,
-  ) = _CopyWithImpl$Subscription$WatchPerson;
+abstract class CopyWith$WatchPerson<TRes> {
+  factory CopyWith$WatchPerson(
+    WatchPerson instance,
+    TRes Function(WatchPerson) then,
+  ) = _CopyWithImpl$WatchPerson;
 
-  factory CopyWith$Subscription$WatchPerson.stub(TRes res) =
-      _CopyWithStubImpl$Subscription$WatchPerson;
+  factory CopyWith$WatchPerson.stub(TRes res) = _CopyWithStubImpl$WatchPerson;
 
   TRes call({
-    Subscription$WatchPerson$watchPerson? watchPerson,
+    WatchPerson$watchPerson? watchPerson,
     String? $__typename,
   });
-  CopyWith$Subscription$WatchPerson$watchPerson<TRes> get watchPerson;
+  CopyWith$WatchPerson$watchPerson<TRes> get watchPerson;
 }
 
-class _CopyWithImpl$Subscription$WatchPerson<TRes>
-    implements CopyWith$Subscription$WatchPerson<TRes> {
-  _CopyWithImpl$Subscription$WatchPerson(
+class _CopyWithImpl$WatchPerson<TRes> implements CopyWith$WatchPerson<TRes> {
+  _CopyWithImpl$WatchPerson(
     this._instance,
     this._then,
   );
 
-  final Subscription$WatchPerson _instance;
+  final WatchPerson _instance;
 
-  final TRes Function(Subscription$WatchPerson) _then;
+  final TRes Function(WatchPerson) _then;
 
   static const _undefined = <dynamic, dynamic>{};
 
@@ -2036,39 +1989,39 @@ class _CopyWithImpl$Subscription$WatchPerson<TRes>
     Object? watchPerson = _undefined,
     Object? $__typename = _undefined,
   }) =>
-      _then(Subscription$WatchPerson(
+      _then(WatchPerson(
         watchPerson: watchPerson == _undefined
             ? _instance.watchPerson
-            : (watchPerson as Subscription$WatchPerson$watchPerson?),
+            : (watchPerson as WatchPerson$watchPerson?),
         $__typename: $__typename == _undefined || $__typename == null
             ? _instance.$__typename
             : ($__typename as String),
       ));
-  CopyWith$Subscription$WatchPerson$watchPerson<TRes> get watchPerson {
+  CopyWith$WatchPerson$watchPerson<TRes> get watchPerson {
     final local$watchPerson = _instance.watchPerson;
     return local$watchPerson == null
-        ? CopyWith$Subscription$WatchPerson$watchPerson.stub(_then(_instance))
-        : CopyWith$Subscription$WatchPerson$watchPerson(
+        ? CopyWith$WatchPerson$watchPerson.stub(_then(_instance))
+        : CopyWith$WatchPerson$watchPerson(
             local$watchPerson, (e) => call(watchPerson: e));
   }
 }
 
-class _CopyWithStubImpl$Subscription$WatchPerson<TRes>
-    implements CopyWith$Subscription$WatchPerson<TRes> {
-  _CopyWithStubImpl$Subscription$WatchPerson(this._res);
+class _CopyWithStubImpl$WatchPerson<TRes>
+    implements CopyWith$WatchPerson<TRes> {
+  _CopyWithStubImpl$WatchPerson(this._res);
 
   TRes _res;
 
   call({
-    Subscription$WatchPerson$watchPerson? watchPerson,
+    WatchPerson$watchPerson? watchPerson,
     String? $__typename,
   }) =>
       _res;
-  CopyWith$Subscription$WatchPerson$watchPerson<TRes> get watchPerson =>
-      CopyWith$Subscription$WatchPerson$watchPerson.stub(_res);
+  CopyWith$WatchPerson$watchPerson<TRes> get watchPerson =>
+      CopyWith$WatchPerson$watchPerson.stub(_res);
 }
 
-const documentNodeSubscriptionWatchPerson = DocumentNode(definitions: [
+const documentNodeWatchPerson = DocumentNode(definitions: [
   OperationDefinitionNode(
     type: OperationType.subscription,
     name: NameNode(value: 'WatchPerson'),
@@ -2122,20 +2075,18 @@ const documentNodeSubscriptionWatchPerson = DocumentNode(definitions: [
     ]),
   ),
 ]);
-Subscription$WatchPerson _parserFn$Subscription$WatchPerson(
-        Map<String, dynamic> data) =>
-    Subscription$WatchPerson.fromJson(data);
+WatchPerson _parserFn$WatchPerson(Map<String, dynamic> data) =>
+    WatchPerson.fromJson(data);
 
-class Options$Subscription$WatchPerson
-    extends graphql.SubscriptionOptions<Subscription$WatchPerson> {
-  Options$Subscription$WatchPerson({
+class Options$WatchPerson extends graphql.SubscriptionOptions<WatchPerson> {
+  Options$WatchPerson({
     String? operationName,
-    Variables$Subscription$WatchPerson? variables,
+    Variables$WatchPerson? variables,
     graphql.FetchPolicy? fetchPolicy,
     graphql.ErrorPolicy? errorPolicy,
     graphql.CacheRereadPolicy? cacheRereadPolicy,
     Object? optimisticResult,
-    Subscription$WatchPerson? typedOptimisticResult,
+    WatchPerson? typedOptimisticResult,
     graphql.Context? context,
   }) : super(
           variables: variables?.toJson() ?? {},
@@ -2145,21 +2096,20 @@ class Options$Subscription$WatchPerson
           cacheRereadPolicy: cacheRereadPolicy,
           optimisticResult: optimisticResult ?? typedOptimisticResult?.toJson(),
           context: context,
-          document: documentNodeSubscriptionWatchPerson,
-          parserFn: _parserFn$Subscription$WatchPerson,
+          document: documentNodeWatchPerson,
+          parserFn: _parserFn$WatchPerson,
         );
 }
 
-class WatchOptions$Subscription$WatchPerson
-    extends graphql.WatchQueryOptions<Subscription$WatchPerson> {
-  WatchOptions$Subscription$WatchPerson({
+class WatchOptions$WatchPerson extends graphql.WatchQueryOptions<WatchPerson> {
+  WatchOptions$WatchPerson({
     String? operationName,
-    Variables$Subscription$WatchPerson? variables,
+    Variables$WatchPerson? variables,
     graphql.FetchPolicy? fetchPolicy,
     graphql.ErrorPolicy? errorPolicy,
     graphql.CacheRereadPolicy? cacheRereadPolicy,
     Object? optimisticResult,
-    Subscription$WatchPerson? typedOptimisticResult,
+    WatchPerson? typedOptimisticResult,
     graphql.Context? context,
     Duration? pollInterval,
     bool? eagerlyFetchResults,
@@ -2173,69 +2123,62 @@ class WatchOptions$Subscription$WatchPerson
           cacheRereadPolicy: cacheRereadPolicy,
           optimisticResult: optimisticResult ?? typedOptimisticResult?.toJson(),
           context: context,
-          document: documentNodeSubscriptionWatchPerson,
+          document: documentNodeWatchPerson,
           pollInterval: pollInterval,
           eagerlyFetchResults: eagerlyFetchResults,
           carryForwardDataOnException: carryForwardDataOnException,
           fetchResults: fetchResults,
-          parserFn: _parserFn$Subscription$WatchPerson,
+          parserFn: _parserFn$WatchPerson,
         );
 }
 
-class FetchMoreOptions$Subscription$WatchPerson
-    extends graphql.FetchMoreOptions {
-  FetchMoreOptions$Subscription$WatchPerson({
+class FetchMoreOptions$WatchPerson extends graphql.FetchMoreOptions {
+  FetchMoreOptions$WatchPerson({
     required graphql.UpdateQuery updateQuery,
-    Variables$Subscription$WatchPerson? variables,
+    Variables$WatchPerson? variables,
   }) : super(
           updateQuery: updateQuery,
           variables: variables?.toJson() ?? {},
-          document: documentNodeSubscriptionWatchPerson,
+          document: documentNodeWatchPerson,
         );
 }
 
-extension ClientExtension$Subscription$WatchPerson on graphql.GraphQLClient {
-  Stream<graphql.QueryResult<Subscription$WatchPerson>> subscribe$WatchPerson(
-          [Options$Subscription$WatchPerson? options]) =>
-      this.subscribe(options ?? Options$Subscription$WatchPerson());
-  graphql.ObservableQuery<Subscription$WatchPerson>
-      watchSubscription$WatchPerson(
-              [WatchOptions$Subscription$WatchPerson? options]) =>
-          this.watchQuery(options ?? WatchOptions$Subscription$WatchPerson());
+extension ClientExtension$WatchPerson on graphql.GraphQLClient {
+  Stream<graphql.QueryResult<WatchPerson>> watchperson(
+          [Options$WatchPerson? options]) =>
+      this.subscribe(options ?? Options$WatchPerson());
+  graphql.ObservableQuery<WatchPerson> watchWatchPerson(
+          [WatchOptions$WatchPerson? options]) =>
+      this.watchQuery(options ?? WatchOptions$WatchPerson());
 }
 
-graphql.QueryResult<Subscription$WatchPerson> useSubscription$WatchPerson(
-        Options$Subscription$WatchPerson options) =>
+graphql.QueryResult<WatchPerson> useWatchPerson(Options$WatchPerson options) =>
     graphql_flutter.useSubscription(options);
 
-class Subscription$WatchPerson$Widget
-    extends graphql_flutter.Subscription<Subscription$WatchPerson> {
-  Subscription$WatchPerson$Widget({
+class WatchPerson$Widget extends graphql_flutter.Subscription<WatchPerson> {
+  WatchPerson$Widget({
     widgets.Key? key,
-    Options$Subscription$WatchPerson? options,
-    required graphql_flutter.SubscriptionBuilder<Subscription$WatchPerson>
-        builder,
-    graphql_flutter.OnSubscriptionResult<Subscription$WatchPerson>?
-        onSubscriptionResult,
+    Options$WatchPerson? options,
+    required graphql_flutter.SubscriptionBuilder<WatchPerson> builder,
+    graphql_flutter.OnSubscriptionResult<WatchPerson>? onSubscriptionResult,
   }) : super(
           key: key,
-          options: options ?? Options$Subscription$WatchPerson(),
+          options: options ?? Options$WatchPerson(),
           builder: builder,
           onSubscriptionResult: onSubscriptionResult,
         );
 }
 
-class Subscription$WatchPerson$watchPerson {
-  Subscription$WatchPerson$watchPerson({
+class WatchPerson$watchPerson {
+  WatchPerson$watchPerson({
     required this.full_name,
     this.$__typename = 'Person',
   });
 
-  factory Subscription$WatchPerson$watchPerson.fromJson(
-      Map<String, dynamic> json) {
+  factory WatchPerson$watchPerson.fromJson(Map<String, dynamic> json) {
     final l$full_name = json['full_name'];
     final l$$__typename = json['__typename'];
-    return Subscription$WatchPerson$watchPerson(
+    return WatchPerson$watchPerson(
       full_name: (l$full_name as String),
       $__typename: (l$$__typename as String),
     );
@@ -2269,7 +2212,7 @@ class Subscription$WatchPerson$watchPerson {
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Subscription$WatchPerson$watchPerson) ||
+    if (!(other is WatchPerson$watchPerson) ||
         runtimeType != other.runtimeType) {
       return false;
     }
@@ -2287,24 +2230,22 @@ class Subscription$WatchPerson$watchPerson {
   }
 }
 
-extension UtilityExtension$Subscription$WatchPerson$watchPerson
-    on Subscription$WatchPerson$watchPerson {
-  CopyWith$Subscription$WatchPerson$watchPerson<
-          Subscription$WatchPerson$watchPerson>
-      get copyWith => CopyWith$Subscription$WatchPerson$watchPerson(
-            this,
-            (i) => i,
-          );
+extension UtilityExtension$WatchPerson$watchPerson on WatchPerson$watchPerson {
+  CopyWith$WatchPerson$watchPerson<WatchPerson$watchPerson> get copyWith =>
+      CopyWith$WatchPerson$watchPerson(
+        this,
+        (i) => i,
+      );
 }
 
-abstract class CopyWith$Subscription$WatchPerson$watchPerson<TRes> {
-  factory CopyWith$Subscription$WatchPerson$watchPerson(
-    Subscription$WatchPerson$watchPerson instance,
-    TRes Function(Subscription$WatchPerson$watchPerson) then,
-  ) = _CopyWithImpl$Subscription$WatchPerson$watchPerson;
+abstract class CopyWith$WatchPerson$watchPerson<TRes> {
+  factory CopyWith$WatchPerson$watchPerson(
+    WatchPerson$watchPerson instance,
+    TRes Function(WatchPerson$watchPerson) then,
+  ) = _CopyWithImpl$WatchPerson$watchPerson;
 
-  factory CopyWith$Subscription$WatchPerson$watchPerson.stub(TRes res) =
-      _CopyWithStubImpl$Subscription$WatchPerson$watchPerson;
+  factory CopyWith$WatchPerson$watchPerson.stub(TRes res) =
+      _CopyWithStubImpl$WatchPerson$watchPerson;
 
   TRes call({
     String? full_name,
@@ -2312,16 +2253,16 @@ abstract class CopyWith$Subscription$WatchPerson$watchPerson<TRes> {
   });
 }
 
-class _CopyWithImpl$Subscription$WatchPerson$watchPerson<TRes>
-    implements CopyWith$Subscription$WatchPerson$watchPerson<TRes> {
-  _CopyWithImpl$Subscription$WatchPerson$watchPerson(
+class _CopyWithImpl$WatchPerson$watchPerson<TRes>
+    implements CopyWith$WatchPerson$watchPerson<TRes> {
+  _CopyWithImpl$WatchPerson$watchPerson(
     this._instance,
     this._then,
   );
 
-  final Subscription$WatchPerson$watchPerson _instance;
+  final WatchPerson$watchPerson _instance;
 
-  final TRes Function(Subscription$WatchPerson$watchPerson) _then;
+  final TRes Function(WatchPerson$watchPerson) _then;
 
   static const _undefined = <dynamic, dynamic>{};
 
@@ -2329,7 +2270,7 @@ class _CopyWithImpl$Subscription$WatchPerson$watchPerson<TRes>
     Object? full_name = _undefined,
     Object? $__typename = _undefined,
   }) =>
-      _then(Subscription$WatchPerson$watchPerson(
+      _then(WatchPerson$watchPerson(
         full_name: full_name == _undefined || full_name == null
             ? _instance.full_name
             : (full_name as String),
@@ -2339,9 +2280,9 @@ class _CopyWithImpl$Subscription$WatchPerson$watchPerson<TRes>
       ));
 }
 
-class _CopyWithStubImpl$Subscription$WatchPerson$watchPerson<TRes>
-    implements CopyWith$Subscription$WatchPerson$watchPerson<TRes> {
-  _CopyWithStubImpl$Subscription$WatchPerson$watchPerson(this._res);
+class _CopyWithStubImpl$WatchPerson$watchPerson<TRes>
+    implements CopyWith$WatchPerson$watchPerson<TRes> {
+  _CopyWithStubImpl$WatchPerson$watchPerson(this._res);
 
   TRes _res;
 

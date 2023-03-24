@@ -1,20 +1,20 @@
-class Input$UpdatePersonInput {
-  factory Input$UpdatePersonInput({
+class UpdatePersonInput {
+  factory UpdatePersonInput({
     required String id,
     String? full_name,
     String? nickname,
     String? website,
   }) =>
-      Input$UpdatePersonInput._({
+      UpdatePersonInput._({
         r'id': id,
         if (full_name != null) r'full_name': full_name,
         if (nickname != null) r'nickname': nickname,
         if (website != null) r'website': website,
       });
 
-  Input$UpdatePersonInput._(this._$data);
+  UpdatePersonInput._(this._$data);
 
-  factory Input$UpdatePersonInput.fromJson(Map<String, dynamic> data) {
+  factory UpdatePersonInput.fromJson(Map<String, dynamic> data) {
     final result$data = <String, dynamic>{};
     final l$id = data['id'];
     result$data['id'] = (l$id as String);
@@ -30,7 +30,7 @@ class Input$UpdatePersonInput {
       final l$website = data['website'];
       result$data['website'] = (l$website as String?);
     }
-    return Input$UpdatePersonInput._(result$data);
+    return UpdatePersonInput._(result$data);
   }
 
   Map<String, dynamic> _$data;
@@ -58,8 +58,8 @@ class Input$UpdatePersonInput {
     return result$data;
   }
 
-  CopyWith$Input$UpdatePersonInput<Input$UpdatePersonInput> get copyWith =>
-      CopyWith$Input$UpdatePersonInput(
+  CopyWith$UpdatePersonInput<UpdatePersonInput> get copyWith =>
+      CopyWith$UpdatePersonInput(
         this,
         (i) => i,
       );
@@ -68,8 +68,7 @@ class Input$UpdatePersonInput {
     if (identical(this, other)) {
       return true;
     }
-    if (!(other is Input$UpdatePersonInput) ||
-        runtimeType != other.runtimeType) {
+    if (!(other is UpdatePersonInput) || runtimeType != other.runtimeType) {
       return false;
     }
     final l$id = id;
@@ -121,14 +120,14 @@ class Input$UpdatePersonInput {
   }
 }
 
-abstract class CopyWith$Input$UpdatePersonInput<TRes> {
-  factory CopyWith$Input$UpdatePersonInput(
-    Input$UpdatePersonInput instance,
-    TRes Function(Input$UpdatePersonInput) then,
-  ) = _CopyWithImpl$Input$UpdatePersonInput;
+abstract class CopyWith$UpdatePersonInput<TRes> {
+  factory CopyWith$UpdatePersonInput(
+    UpdatePersonInput instance,
+    TRes Function(UpdatePersonInput) then,
+  ) = _CopyWithImpl$UpdatePersonInput;
 
-  factory CopyWith$Input$UpdatePersonInput.stub(TRes res) =
-      _CopyWithStubImpl$Input$UpdatePersonInput;
+  factory CopyWith$UpdatePersonInput.stub(TRes res) =
+      _CopyWithStubImpl$UpdatePersonInput;
 
   TRes call({
     String? id,
@@ -138,16 +137,16 @@ abstract class CopyWith$Input$UpdatePersonInput<TRes> {
   });
 }
 
-class _CopyWithImpl$Input$UpdatePersonInput<TRes>
-    implements CopyWith$Input$UpdatePersonInput<TRes> {
-  _CopyWithImpl$Input$UpdatePersonInput(
+class _CopyWithImpl$UpdatePersonInput<TRes>
+    implements CopyWith$UpdatePersonInput<TRes> {
+  _CopyWithImpl$UpdatePersonInput(
     this._instance,
     this._then,
   );
 
-  final Input$UpdatePersonInput _instance;
+  final UpdatePersonInput _instance;
 
-  final TRes Function(Input$UpdatePersonInput) _then;
+  final TRes Function(UpdatePersonInput) _then;
 
   static const _undefined = <dynamic, dynamic>{};
 
@@ -157,7 +156,7 @@ class _CopyWithImpl$Input$UpdatePersonInput<TRes>
     Object? nickname = _undefined,
     Object? website = _undefined,
   }) =>
-      _then(Input$UpdatePersonInput._({
+      _then(UpdatePersonInput._({
         ..._instance._$data,
         if (id != _undefined && id != null) 'id': (id as String),
         if (full_name != _undefined) 'full_name': (full_name as String?),
@@ -166,9 +165,9 @@ class _CopyWithImpl$Input$UpdatePersonInput<TRes>
       }));
 }
 
-class _CopyWithStubImpl$Input$UpdatePersonInput<TRes>
-    implements CopyWith$Input$UpdatePersonInput<TRes> {
-  _CopyWithStubImpl$Input$UpdatePersonInput(this._res);
+class _CopyWithStubImpl$UpdatePersonInput<TRes>
+    implements CopyWith$UpdatePersonInput<TRes> {
+  _CopyWithStubImpl$UpdatePersonInput(this._res);
 
   TRes _res;
 

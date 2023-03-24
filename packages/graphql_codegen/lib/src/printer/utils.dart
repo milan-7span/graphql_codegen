@@ -30,6 +30,18 @@ class NamePrinter {
               ))
           .join(separator ?? this.separator);
 
+  String printName2(
+    Name name, {
+    bool isAction = false,
+    String? separator,
+    String? prefix,
+  }) =>
+      name.segments
+          .map((s) => _printNameSegment2(
+                s,
+              ))
+          .join();
+
   String _printPrefix(NameSegment segment, {bool isAction = false}) {
     if (segment is EnumNameSegment) {
       return 'Enum';
@@ -43,11 +55,11 @@ class NamePrinter {
     if (segment is OperationNameSegment) {
       switch (segment.node.type) {
         case OperationType.mutation:
-          return isAction ? 'mutate' : 'Mutation';
+          return isAction ? 'mutate' : '';
         case OperationType.query:
-          return isAction ? 'query' : 'Query';
+          return isAction ? 'query' : '';
         case OperationType.subscription:
-          return isAction ? 'subscribe' : 'Subscription';
+          return isAction ? 'subscribe' : '';
         default:
           throw new UnsupportedError("Unsupported opreation type");
       }
@@ -67,7 +79,11 @@ class NamePrinter {
     if (segment is FieldNameSegment) {
       return segment.name.value;
     }
-    return '${prefix ?? _printPrefix(segment, isAction: isAction)}${separator ?? this.separator}${segment.name.value}';
+    return '${segment.name.value}';
+  }
+
+  String _printNameSegment2(NameSegment segment) {
+    return '${segment.name.value.toLowerCase()}';
   }
 
   String printDocumentDefinitionNodeName(Name name) =>
@@ -160,7 +176,7 @@ class NamePrinter {
       "ResultExtension${separator}${printName(name)}";
 
   String printGraphQLClientExtensionMethodName(Name name) =>
-      printName(name, isAction: true);
+      printName2(name, isAction: true);
 
   String printGraphQLClientExtensionWatchMethodName(Name name) =>
       "watch${printName(name, isAction: false)}";
